@@ -1,0 +1,2031 @@
+html, body{
+   box-sizing: border-box;
+   direction: ltr;
+   margin: 0px;
+   padding: 0px;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+}
+.main{
+   margin: 0px;
+   background-color: #000;
+   display: grid;
+   gap: 8px;
+   grid-template-columns: auto 1fr;
+   grid-template-rows: auto 1fr auto;
+   height: 100%;
+   padding: 8px;
+   position: relative;
+   grid-template-areas:
+   "top top top"
+   "left right right"
+   "foot foot foot";
+}
+@font-face {
+   font-family:'spotify-bold';
+   src: url(SpotifyMixUI-Bold-.woff2);
+}
+@font-face {
+   font-family: 'spotify-regular' ;
+   src: url(SpotifyMixUI-Regular-.woff2);
+}
+@font-face {
+   font-family:'spotify-title';
+   src: url(SpotifyMixUITitleVariable.woff2);
+}
+.main .top{
+   grid-area: top;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box; 
+    height: 48px;
+    justify-content: space-between;
+    position: relative; 
+}
+.main .top .logo{
+   align-items: center;
+   display: flex;
+   margin: 20px;
+   cursor: pointer;
+   z-index: 1;
+}
+.main .top .top1{
+   display: flex; 
+   position: absolute;
+   left: 0px;
+   right: 0px;
+   flex: 1;
+   justify-content: center;
+   align-items: center;
+   gap: 0px;
+   width: 100%; 
+}
+.main .top .top1 .option{
+   display: flex;
+   max-width: 546px;
+   min-width: 350px;
+   width: 50%;
+}
+.top .top1 .option .home{
+   align-items: center;
+   cursor: pointer;
+   justify-content: center;
+   margin-left: 8px;
+   margin-right: 0px;
+   margin-top: 0px;
+   margin-bottom: 0px;
+   padding: 12px;
+   position: relative;
+   background-color: rgb(31, 31, 31);
+   border-radius: 50%;
+   flex-shrink: 0;
+   border: 0px;
+   height: 24px;
+   width: 24px;
+}
+.top .top1 .option .home svg{
+   height: 24px;
+   width: 24px;
+   fill: white;
+}
+.top .top1 .option .inner{
+   height: 100%;
+   width: 100%;
+}
+.top .top1 .option .inner .choose{
+   padding: 0px 8px;
+   position: relative;
+}
+.top .top1 .option .choose .lense{
+   right: auto;
+   z-index: 1;
+   position: absolute;
+   box-sizing: border-box;
+   display: flex;
+}
+.top1 .option .choose .lense svg{
+   margin: 0px;
+   padding-left: 12px;
+   padding-right: 12px;
+   width: 24px;
+   height: 48px; 
+   fill: rgb(179, 179, 179);
+}
+.top1 .option .choose input{
+   padding-top: 12px;
+   padding-left: 48px;
+   padding-bottom: 12px;
+   padding-right: 64px;
+   background-color: rgb(31, 31, 31);
+   font-family: 'spotify-regular', "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", "MS Gothic";
+   cursor: pointer;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   letter-spacing: -0.01px;
+   line-height: normal;
+   border: 0px;
+   border-radius: 500px;
+   width: 100%;
+   height: 48px;
+}
+.top1 .option .choose input::placeholder{
+   color: rgba(255, 255, 255, 0.623);
+}
+.top1 .option .choose .icon{
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   display: flex;
+   right: 12px;
+   border-left-width: 0.5px;
+   padding-left: 12px;
+   padding-right: 12px;
+   box-sizing: border-box;
+   border-color: rgba(221, 221, 221, 0.562);
+   border-style: solid;
+   border-top: 0px;
+   border-bottom: 0px; 
+   border-right: 0px;
+}.top1 .option .choose .icon svg{
+   padding-top: 1px;
+   height: 24px;
+   width: 24px;
+   align-items: baseline;
+   fill: rgb(179, 179, 179);
+   cursor: pointer;
+   justify-content: center;
+   position: relative;
+}
+.main .top .top2{
+   display: none;
+}
+.main .top .button{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   align-items: center;
+   justify-content: flex-end;
+   box-sizing: border-box;
+}
+.main .top .button .signup{
+   padding: 8px 32px 8px 8px;
+   font-weight: 700;
+   font-family: 'spotify-bold', "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", "MS Gothic";
+   font-size: 16px;
+   align-items: center;
+   background-color: transparent;
+   border: none;
+   color: rgb(179, 179, 179);
+   border-radius: 9999px;
+   box-sizing: border-box;
+   cursor: pointer;
+   display: inline-flex;
+   justify-content: center;
+   position: relative;
+   margin: 0px;
+   text-align: center;
+   font-style: normal;
+   height: 48px;
+}
+.main .top .button  .login{
+   padding: 8px 32px;
+   font-weight: 700;
+   font-family: 'spotify-bold', "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", "MS Gothic";
+   font-size: 16px;
+   align-items: center;
+   background-color: rgb(255, 255, 255);
+   border: none;
+   color: rgb(0, 0, 0);
+   border-radius: 9999px;
+   box-sizing: border-box;
+   cursor: pointer;
+   display: inline-flex;
+   justify-content: center;
+   position: relative;
+   margin: 0px;
+   text-align: center;
+   font-style: normal;
+   height: 48px;
+}
+.main .left{
+   grid-area: left;
+   display: flex;
+   position: relative;
+   flex-direction: column;
+   min-height: 0px;
+   width: 420px;
+   box-sizing: border-box;
+   background-color: #000;
+}
+.main .left nav{
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+   height: 100%;
+   min-height: 0;
+   background-color: rgb(18, 18, 18);
+   border-radius: 8px;
+}
+.main .left nav .left-in{
+   display: flex;
+   min-height: 0;
+   flex-direction: column;
+   width: 100%;
+   flex: 1;
+   position: relative;
+   border-radius: 8px; 
+   background-color: #121212;
+}
+.left nav .left-in .head{
+   display: flex;
+   flex-direction: column;
+   flex: 1;
+   width: 100%;
+   padding-top: 0px;
+}
+.left nav .left-in .head .library{
+   padding: 12px 16px 8px 16px;
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+.left nav .left-in .head .library .library-in{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 8px;
+}
+nav .left-in .head .library .library-in .logo{
+   display: flex;
+   align-items: center;
+   gap: 4px;
+   height: 40px;
+   justify-content: flex-start;
+   cursor: pointer;
+   margin-right: auto;
+}
+nav .left-in .head .library .library-in .logo .logo-in{
+   padding: 4px 8px;
+   display: flex;
+   height: 40px;
+   justify-content: flex-start;
+   background-color: rgba(0, 0, 0, 0);
+   color: rgb(179, 179, 179);
+   border: none;
+   align-items: center;
+}
+nav .head .library .library-in .logo .logo-in .icon{
+   display: flex;
+   margin-right: 12px;
+}
+nav .head .library .library-in .logo .logo-in .icon svg{
+   height: 24px;
+   width: 24px;
+   fill: rgb(179, 179, 179);
+}
+nav .head .library .library-in .logo .logo-in p{
+   font-weight: 700;
+   font-family: 'spotify-bold', "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", "MS Gothic";
+   font-size: 16px;
+   word-spacing: 0px;
+}
+nav .head .library .library-in .create{
+   background-color: transparent;
+   border: 0px;
+   position: relative;
+   text-align: center;
+   border-radius: 9999px;
+   cursor: pointer;
+   padding: 8px;
+   align-items: center;
+   display: inline-flex;
+}
+nav .head .library .library-in .create svg{
+   width: 16px;
+   height: 16px;
+   fill: rgb(179, 179, 179);  
+}
+nav .head .underline{
+   margin: 8px 16px;
+   height: 0px;
+   gap: 8px;
+}
+nav .maincontent{
+   margin-right: 0px;
+   margin-bottom: 0px;
+   margin-left: 0px;
+   top: 0px;
+   right: auto;
+   left: 0px;
+   width: 100%;
+   padding: 0px;
+   height: 100%;
+}
+nav .maincontent .main{
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+   min-height: 100%;
+   padding: 0px 8px 8px;
+   background-color: rgb(18, 18, 18);
+}
+nav .maincontent .main .createplaylist{
+   margin: 8px 0px;
+   padding: 16px 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   border-radius: 8px;
+   gap: 20px;
+   background-color: rgb(31, 31, 31);
+}
+nav .main .createplaylist .points{
+   gap: 8px;
+   display: flex;
+   flex-direction: column;
+}
+nav .main .createplaylist .points .point:nth-child(1){
+   color: #fff;
+   font-weight: 700;
+   font-family: 'spotify-bold', "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", "MS Gothic";
+   font-size: 16px;
+}
+nav .main .createplaylist .points .point:nth-child(2){
+   color: #fff;
+   font-family: 'spotify-regular', "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", "MS Gothic";
+   font-size: 14px;
+   font-weight: 400;
+}
+nav .main .createplaylist .button{
+   font-weight: 700;
+   font-family: 'spotify-bold', "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", "MS Gothic";
+   font-size: 14px;
+   box-sizing: border-box;
+   border-radius: 9999px;
+   background-color: transparent;
+   border: 0px;
+   cursor: pointer;
+   display: inline-block;
+   position: relative;
+   text-align: center;
+   text-decoration: none;
+   padding: 0px;
+}
+nav .main .createplaylist .button span{
+   background-color: #fff;
+   box-sizing: border-box;
+   display: flex;
+   border-radius: 9999px;
+   min-block-size: 32px;
+   justify-content: center;
+   position: relative;
+   align-items: center;
+   padding: 4px 16px;
+   color: rgb(0, 0, 0);
+}
+nav .main .browsepodcast{
+   margin: 8px 0px;
+   padding: 16px 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   border-radius: 8px;
+   gap: 20px;
+   background-color: rgb(31, 31, 31);
+}
+nav .main .browsepodcast .points{
+   gap: 8px;
+   display: flex;
+   flex-direction: column;
+}
+nav .main .browsepodcast .points .point:nth-child(1){
+   color: #fff;
+   font-weight: 700;
+   font-family: 'spotify-bold', "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", "MS Gothic";
+   font-size: 16px;
+}
+nav .main .browsepodcast .points .point:nth-child(2){
+   color: #fff;
+   font-weight: 400;
+   font-family: 'spotify-regular', "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", "MS Gothic";
+   font-size: 14px;
+}
+nav .main .browsepodcast .button{
+   font-weight: 700;
+   font-family: 'spotify-bold', "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", "MS Gothic";
+   font-size: 14px;
+   box-sizing: border-box;
+   border-radius: 9999px;
+   background-color: transparent;
+   border: 0px;
+   cursor: pointer;
+   display: inline-block;
+   position: relative;
+   text-align: center;
+   text-decoration: none;
+   padding: 0px;
+}
+nav .main .browsepodcast .button span{
+   background-color: #fff;
+   box-sizing: border-box;
+   display: flex;
+   border-radius: 9999px;
+   min-block-size: 32px;
+   justify-content: center;
+   position: relative;
+   align-items: center;
+   padding: 4px 16px;
+   color: rgb(0, 0, 0);
+}
+nav .left-footer{
+   overflow: hidden;
+}
+nav .left-foot{
+   margin: 32px 0px;
+   padding: 0px 24px;
+   text-align: start;
+}
+nav .left-foot .point-in{
+   display: flex;
+   flex-wrap:wrap;
+}
+nav .left-foot .point-in .point{
+   margin-right: 16px;
+}
+nav .left-foot .point-in .point a{
+   display: inline-flex;
+   font-family: 'spotify-regular', "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", "MS Gothic";
+   font-size: 11px;
+   font-weight: 400;
+   color: rgb(179, 179, 179);
+   text-decoration: none;
+   margin-top: 0px;
+   margin-bottom: 12px;
+   line-height:normal;
+}
+nav .left-foot .Cookies{
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+   font-family: 'spotify-regular', "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", "MS Gothic";
+   font-size: 12px;
+   font-weight: 400;
+   padding-right: 16px;
+}
+nav .english{
+   padding: 0px 24px;
+   margin-bottom: 32px;
+   justify-content: center;
+}
+nav .english .language{
+   box-sizing: border-box;
+   border: 1px solid;
+   padding: 3px 15px 3px 32px;
+   align-items: center;
+   background-color: transparent;
+   border-radius: 9999px;
+   border-style: solid;
+   border-color: rgb(124, 124, 124);
+   color: rgb(255, 255, 255);
+   cursor: pointer;
+   position: relative;
+   text-align: center;
+   text-decoration: none;
+   display: inline-flex;
+   font-family: 'spotify-bold', "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", "MS Gothic";
+   font-size: 14px;
+   font-weight: 700;
+   gap: 4px;
+   justify-content: center;
+   min-inline-size: 0px;
+   min-block-size: 32px;
+}
+nav .english .language svg{
+   left: 12px;
+   display: flex;
+   position: absolute;
+   height: 16px;
+   width: 16px;
+   fill: #fff;
+}
+.left .resizer{
+   display: flex;
+   align-items: center;
+   cursor: grab;
+   height: 100%;
+   justify-content: center;
+   position: absolute;
+   width: 8px;
+   left: 420px;
+   height: 100%;
+}
+.foot{
+   grid-area: foot;
+   width: 100%;
+   z-index: 1;
+   padding-bottom: 8px;
+}
+.foot footer{
+   display: flex;
+   min-width: 620px;
+   box-sizing: border-box;
+   flex-direction: column;
+   height: auto;
+   padding-bottom: 8px;
+}
+footer .footer{
+   padding: 11px 24px 7px 15px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   cursor: pointer;
+   gap: 24px;
+   justify-content: space-between;
+   position: relative;
+   z-index: 1;
+   padding-bottom: 8px;
+   background-image: linear-gradient(90deg, rgb(175, 40, 150), rgb(80, 155, 245));
+}
+footer .footer .preview{
+   margin: 0 0 4px;
+   color: #fff;
+   line-height: normal;
+}
+footer .footer .preview .one{
+   font-family: 'spotify-bold', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size: 14px;
+   font-weight: 700;
+   line-height: normal;
+   margin: 0px;
+}
+footer .footer .preview .two{
+   font-family: 'spotify-regular', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size: 16px;
+   font-weight: 400;
+   margin: 0px;
+}
+footer .footer .sign{
+   font-family: 'spotify-bold', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size: 16px;
+   font-weight: 700;
+   box-sizing: border-box;
+   line-height: normal;
+   background-color: transparent;
+   border: 0px;
+   border-radius: 9999px;
+   cursor: pointer;
+   display: inline-block;
+   position: relative;
+   text-align: center;
+   text-decoration: none;
+   padding: 0px;
+   align-self: center;
+}
+footer .footer .sign .sign-up{
+   padding: 8px 32px;
+   white-space: nowrap;
+   box-sizing: border-box;
+   position: relative;
+   background-color: #fff;
+   color: #000;
+   display: flex;
+   border-radius: 9999px;
+   min-block-size: 48px;
+   align-items: center;
+   justify-content: center;
+}
+.main .right{
+   grid-area: right;
+   margin: 0px;
+   top: 0px;
+   right: auto;
+   left: 0px;
+   width: 100%;
+   padding: 0px;
+   height: auto;
+   position: relative;
+   overflow-x: hidden;
+   border-radius: 8px;
+}
+.main .right .right-in{
+   min-height: 792px;
+   padding-bottom: 32px;
+   width: 100%;
+   background-color: rgb(18, 18, 18);
+   }
+   .main .right .right-in .background{
+      background-color: rgb(83, 83, 83);
+      height: 320px;
+      margin-top: 0;
+      position: absolute;
+      width: 100%;
+      top: 0px;
+      bottom: 0px;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6) 0px, rgb(18, 18, 18) 100%), url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=);
+   }
+.right .right-in .show{
+   padding-top: 4px;
+   background-color: rgba(0, 0, 0, 0);
+   padding-right: 209px;
+}
+.right .right-in .show .show-in{
+   display: flex;
+   row-gap: 24px;
+   column-gap: 32px;
+   flex-direction: row;
+   flex-flow: row wrap;
+   width: 100%;
+   max-width: 1955px;
+   padding: 0px 24px;
+}
+@media screen and (min-width:769px) and (max-width:1024px){
+   .right .right-in .show .show-in{
+      padding-left: 16px;
+   }
+   .top .top1 .option{
+      margin-left: -9px;
+   }
+   .top1 .option .choose input{
+      width: 440px;
+   }
+}
+@media screen and (min-width:1025px) and (max-width:1440px){
+   .right .right-in .show .show-in{
+      padding-left: 19px;
+   }
+}
+.right-in .show .show-in .artists{
+   display: flex;
+   max-width: 100%;
+   min-width: 100%;
+   flex-direction: column;
+   position: relative;
+   flex: 1 1 auto;
+   min-height: 260px;
+}
+.right-in .show .show-in .artists .heading{
+   margin-bottom: 8px;
+   height: 40px;
+   display: grid;
+   gap: 8px;
+   position: relative;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto 1fr auto;
+   justify-content: center;
+}
+.right-in .show .show-in .artists .heading .head{
+   gap: 12px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-content:center ;
+}
+.show .show-in .artists .heading .head .main-head{
+   display: flex;
+   height: 100%;
+   flex-direction: column;
+}
+.show .show-in .artists .heading .head .main-head h2{
+   color: rgb(255, 255, 255);
+   font-family: 'spotify-title', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size: 24px;
+   line-height: 52px;
+   margin:0;
+}
+.show .show-in .artists .heading .head .button{
+   align-items: flex-end;
+   justify-content: flex-end;
+   align-content: center;
+}
+.show .show-in .artists .heading .head .button a{
+   color: #fff;
+   text-decoration: none;
+   font-family: 'spotify-bold', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size: 14px;
+   font-weight: 700;
+   line-height: normal;
+   line-height: 60px;
+}
+@media screen and (min-width:1440px){
+   .show .show-in .artists .heading .head .button a{
+      margin: 2px 5px 0px 0px;
+   }
+}
+.show .show-in .artists .artists-in{
+   margin: 0px -12px;
+   display: grid;
+   grid-template-rows: repeat(1, minmax(0, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+}
+.show .show-in .artists .artists-in .row-in{
+   padding: 12px;
+   display: inline-flex;
+   flex-direction: column;
+   row-gap:8px;
+   box-sizing: border-box;
+   position: relative;
+   border-radius: 6px;
+   color: #fff;
+   cursor: pointer;
+}
+.show .show-in .artists .artists-in .row-in img{
+   border-radius: 50%;
+   background-color:rgb(104, 40, 40);
+}
+.show .show-in .artists .artists-in .row-in .about{
+   display: flex;
+   flex-direction: column;
+   row-gap: 4px;
+   flex-basis: 100%;
+   align-items: flex-start;
+}
+.show .show-in .artists .artists-in .row-in .about a{
+   font-family: 'spotify-regular', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size :16px;
+   font-weight: 400;
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+   line-height: normal;
+}
+.show .show-in .artists .artists-in .row-in .about p{
+   font-family: 'spotify-regular', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size :14px;
+   font-weight: 400;
+   color: rgb(179, 179, 179);
+   line-height: normal;
+   box-sizing: border-box;
+   margin: 0px;
+}
+.right-in .show .show-in .albums{
+   display: flex;
+   max-width: 100%;
+   min-width: 100%;
+   flex-direction: column;
+   position: relative;
+   flex: 1 1 auto;
+   min-height: 260px;
+}
+@media screen and (min-width:769px) and (max-width:1440px){
+   .right-in .show .show-in .albums{
+      padding-top: 0px;
+   }
+   .right-in .show .show-in .albums .heading .head{
+      margin-bottom: -5px;
+      height: 40px;
+   }
+   .show .show-in .artists .heading .head .button a{
+      margin: 2px 0px 0px 10px;
+   }
+   .show .show-in .albums .heading .head .button{
+      height: 40px;
+      align-items: center;
+      align-content: center;
+   }
+   .show .show-in .albums .heading .head .button a {
+      margin: 2px 0px 0px 0px;
+   }
+   .right-in .show .show-in .albums .heading {
+      margin-bottom: 0;
+   }
+}
+.right-in .show .show-in .albums .heading{
+   margin-bottom: 4px;
+   height: 40px;
+   display: grid;
+   column-gap: 12px;
+   row-gap: 1px;
+   position: relative;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto 1fr auto;
+   justify-content: center;
+   align-content: center;
+}
+.right-in .show .show-in .albums .heading .head{
+   gap: 12px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+.show .show-in .albums .heading .head .main-head{
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   justify-content: flex-end;
+}
+.show .show-in .albums .heading .head .main-head h2{
+   color: rgb(255, 255, 255);
+   font-family: 'spotify-title', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size: 24px;
+   font-weight: 700;
+   line-height: normal;
+}
+.show .show-in .albums .heading .head .button a{
+   color: #fff;
+   text-decoration: none;
+   font-family: 'spotify-bold', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size: 14px;
+   font-weight: 700;
+}
+@media screen and (min-width:1025px) and (max-width:1440px){
+   .right .right-in .show .show-in{
+      row-gap: 40px;
+   }
+   .show .show-in .albums .heading .head .button a{
+      margin: 2px 8px 0px 0px;
+   }
+}
+.show .show-in .albums .albums-in{
+   margin: 0px -12px;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+}
+.show .show-in .albums .albums-in .row-in{
+   padding: 12px;
+   display: inline-flex;
+   flex-direction: column;
+   row-gap: 8px;
+   box-sizing: border-box;
+   position: relative;
+   border-radius: 6px;
+   color: #fff;
+   cursor: pointer;
+}
+.show .show-in .albums .albums-in .row-in img{
+   border-radius: 6px;
+}
+.show .show-in .albums .albums-in .row-in .about{
+   display: flex;
+   column-gap: 12px;
+   flex-direction: column;
+   gap: 4px;
+   flex-basis: 100%;
+   align-items: flex-start;
+}
+.show .show-in .albums .albums-in .row-in .about a{
+   font-family: 'spotify-regular', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size :16px;
+   font-weight: 400;
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+}
+.show .show-in .albums .albums-in .row-in .about p{
+   font-family: 'spotify-regular', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size :14px;
+   font-weight: 400;
+   color: rgb(179, 179, 179);
+   margin: 0px;
+}
+.right-in .show .show-in .radio{
+   display: flex;
+   max-width: 100%;
+   min-width: 100%;
+   flex-direction: column;
+   position: relative;
+   flex: 1 1 auto;
+   min-height: 260px;
+}
+.right-in .show .show-in .radio .heading{
+   margin-bottom: 8px;
+   height: 40px;
+   display: grid;
+   column-gap: 12px;
+   row-gap: 8px;
+   position: relative;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto 1fr auto;
+}
+.right-in .show .show-in .radio .heading .head{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+.show .show-in .radio .heading .head .main-head{
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   align-self: flex-end;
+   justify-content: flex-end;
+}
+.show .show-in .radio .heading .head .main-head h2{
+   color: rgb(255, 255, 255);
+   font-family: 'spotify-title', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size: 24px;
+   font-weight: 700;
+   line-height: 50px;
+   margin: 0;
+}
+.show .show-in .radio .heading .head .button a{
+   margin: 2px 8px 0px 0px;
+   color: #fff;
+   text-decoration: none;
+   font-family: 'spotify-bold', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size: 14px;
+   font-weight: 700;
+}
+.show .show-in .radio .radio-in{
+   margin: 0px -12px;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+}
+.show .show-in .radio .radio-in .row-in{
+   padding: 12px;
+   display: inline-flex;
+   flex-direction: column;
+   row-gap: 8px;
+   box-sizing: border-box;
+   position: relative;
+   border-radius: 6px;
+   color: #fff;
+   cursor: pointer;
+}
+.show .show-in .radio .radio-in .row-in img{
+   border-radius: 6px;
+}
+.show .show-in .radio .radio-in .row-in .about{
+   display: flex;
+   flex-direction: column;
+   gap: 4px;
+   flex-basis: 100%;
+   align-items: flex-start;
+}
+.show .show-in .radio .radio-in .row-in .about a{
+   font-family: 'spotify-regular', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size :16px;
+   font-weight: 400;
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+}
+.show .show-in .radio .radio-in .row-in .about p{
+   font-family: 'spotify-regular', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size :14px;
+   font-weight: 400;
+   color: rgb(179, 179, 179);
+   margin: 0px;
+}
+@media screen and (min-width:769px) and (max-width:1440px){
+   .right-in .show .show-in .radio{
+      padding-top: 3px;
+   }
+   .right-in .show .show-in .radio .heading .head{
+      margin-top: 2px;
+   }
+   .show .show-in .albums .heading .head .main-head h2{
+      margin: 0px 0px 0px 0px;
+   }
+}
+.right-in .show .show-in .charts{
+   display: flex;
+   max-width: 100%;
+   min-width: 100%;
+   flex-direction: column;
+   position: relative;
+   flex: 1 1 auto;
+   min-height: 260px;
+}
+.right-in .show .show-in .charts .heading{
+   margin-bottom: 8px;
+   height: 40px;
+   display: grid;
+   column-gap: 12px;
+   row-gap: 8px;
+   position: relative;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto 1fr auto;
+}
+.right-in .show .show-in .charts .heading .head{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+.show .show-in .charts .heading .head .main-head{
+   display: flex;
+   flex-direction: column;
+   align-self: flex-end;
+   justify-content: flex-end;
+}
+.show .show-in .charts .heading .head .main-head h2{
+   color: rgb(255, 255, 255);
+   font-family: 'spotify-title', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size: 24px;
+   font-weight: 700;
+   line-height: 50px;
+   margin: 0;
+}
+.show .show-in .charts .charts-in{
+   margin: 0px -12px;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+}
+.show .show-in .charts .charts-in .row-in{
+   padding: 12px;
+   display: inline-flex;
+   flex-direction: column;
+   row-gap: 8px;
+   box-sizing: border-box;
+   position: relative;
+   border-radius: 6px;
+   color: #fff;
+   cursor: pointer;
+}
+.show .show-in .charts .charts-in .row-in img{
+   border-radius: 6px;
+}
+.show .show-in .charts .charts-in .row-in .about{
+   display: flex;
+   flex-direction: column;
+   gap: 4px;
+   flex-basis: 100%;
+   align-items: flex-start;
+}
+.show .show-in .charts .charts-in .row-in .about a{
+   font-family: 'spotify-regular', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size :16px;
+   font-weight: 400;
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+}
+.show .show-in .charts .charts-in .row-in .about p{
+   font-family: 'spotify-regular', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size :14px;
+   font-weight: 400;
+   color: rgb(179, 179, 179);
+   margin: 0px;
+}
+.right-in .show .show-in .playlist{
+   display: flex;
+   max-width: 100%;
+   min-width: 100%;
+   flex-direction: column;
+   position: relative;
+   flex: 1 1 auto;
+   min-height: 260px;
+}
+.right-in .show .show-in .playlist .heading{
+   margin-bottom: 8px;
+   height: 40px;
+   display: grid;
+   column-gap: 12px;
+   row-gap: 8px;
+   position: relative;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto 1fr auto;
+}
+.right-in .show .show-in .playlist .heading .head{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+.show .show-in .playlist .heading .head .main-head{
+   display: flex;
+   flex-direction: column;
+   align-self: flex-end;
+   justify-content: flex-end;
+}
+.show .show-in .playlist .heading .head .main-head h2{
+   color: rgb(255, 255, 255);
+   font-family: 'spotify-title', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size: 24px;
+   font-weight: 700;
+   line-height: 50px;
+   margin: 0;
+}
+.show .show-in .playlist .heading .head .button a{
+   margin: 2px 8px 0px 0px;
+   color: #fff;
+   text-decoration: none;
+   font-family: 'spotify-bold', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size: 14px;
+   font-weight: 700;
+}
+.show .show-in .playlist .playlist-in{
+   margin: 0px -12px;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+}
+.show .show-in .playlist .playlist-in .row-in{
+   padding: 12px;
+   display: inline-flex;
+   flex-direction: column;
+   row-gap: 8px;
+   box-sizing: border-box;
+   position: relative;
+   border-radius: 6px;
+   color: #fff;
+   cursor: pointer;
+}
+.show .show-in .playlist .playlist-in .row-in img{
+   border-radius: 6px;
+}
+.show .show-in .playlist .playlist-in .row-in .about{
+   display: flex;
+   column-gap: 12px;
+   flex-direction: column;
+   row-gap: 4px;
+   flex-basis: 100%;
+   align-items: flex-start;
+}
+.show .show-in .playlist .playlist-in .row-in .about a{
+   font-family: 'spotify-regular', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size :16px;
+   font-weight: 400;
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+}
+.show .show-in .playlist .playlist-in .row-in .about p{
+   font-family: 'spotify-regular', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size :14px;
+   font-weight: 400;
+   color: rgb(179, 179, 179);
+   margin: 0px;
+}
+.right .right-in .bottom{
+   padding-top: 40px;
+   background-color: #121212;
+}
+.right-in .bottom nav{
+   padding:8px 32px 40px 32px;
+   background-color: rgb(18, 18, 18);
+   width: 100%;
+   box-sizing: border-box;
+}
+.right-in .bottom nav .footer{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin-top: 32px;
+}
+   .right-in .bottom nav .footer .footer_style{
+       flex: 1 1 50%;
+       padding-bottom: 0px;
+       display: flex;
+       flex-direction: row;
+    }
+    .right-in .bottom nav .footer .footer_style .column{
+       width: 20%;
+       margin-right: 24px;
+       margin-bottom: 32px;
+    }
+.right-in .bottom nav .footer .footer_style .column ul{
+   padding-inline-start: 0px;
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   margin: 0px;
+}
+.right-in .bottom nav .footer .footer_style .column ul p{
+   color: rgb(255, 255, 255);
+   box-sizing: border-box;
+   font-family: 'spotify-bold', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size: 16px;
+   font-weight: 700;
+   margin: 0px;
+}
+.right-in .bottom nav .footer .footer_style .column ul a{
+   text-decoration: none;
+   font-family: 'spotify-regular', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   font-size: 12px;
+   font-weight: 700;
+   margin: 8px 0px;
+   box-sizing: border-box;
+   color: rgb(179, 179, 179);
+}
+.right-in .bottom .footer_style .column ul a:hover{
+   text-decoration: underline;
+}
+.bottom .footer .sociallink{
+   margin-bottom: 40px;
+}
+.bottom .footer .sociallink .link{
+   padding-right: 12px;
+   display: inline;
+}
+.bottom .footer .sociallink .link a{
+   align-items: center;
+   background-color: rgb(41, 41, 41);
+   border-radius: 50%;
+   display: inline-flex;
+   height: 40px;
+   width: 40px;
+   justify-content: center
+}
+.bottom .footer .sociallink .link svg{
+   fill: white;
+   height: 16px;
+   width: 16px;  
+}
+hr{
+   border-top: 1px;
+   width: 100%;
+   border-color: rgba(255, 255, 255, 0.1);
+   height: 0px;
+   margin-bottom: 24px;
+   border-style: solid;
+}
+.right .privacy .Safety-privacy{
+   display: none;
+}
+.right .privacy{
+   padding-top: 16px;
+}
+.right .AB{
+  padding-right: 16px;
+}
+.right .AB p{
+  font-size: 12px;
+  font-family: 'spotify-regular', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(179, 179, 179);
+}
+.right .english{
+   display: none;
+}
+@media screen and (min-width:1440px){
+   hr{
+      margin-top: 0;
+      border-bottom: 0;
+   }
+   .right .AB p{
+      margin: 0;
+   }
+   .bottom .footer .sociallink .link:nth-child(3){
+      padding: 0;
+   }
+   .right-in .bottom nav .footer .footer_style .column ul p{
+      margin-bottom: 8px;
+   }
+   .right-in .bottom nav .footer .footer_style .column ul a{
+      text-decoration: none;
+      font-family: 'spotify-regular', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+      font-size: 16px;
+      font-weight: 400;
+      margin: 0px 0px 8px 0px;
+      box-sizing: border-box;
+      color: rgb(179, 179, 179);
+   }
+}
+@media screen and (max-width:768px){
+   html, body{
+      overflow-y: scroll;
+      overflow-x: hidden;
+   }
+   .main .top{
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     gap: 16px;
+     height: 56px;
+     padding: 16px;
+     z-index: 1;
+     background-color: #000;
+   }  
+   .main .top .logo{
+     height: 32px;
+     margin: 0px;
+   }
+   .main .top .top1{
+     display: none;
+   }
+   .main .top .top2{
+     display: flex;
+     box-sizing: border-box;
+     height: 32px;
+   }
+   .top .top2 .lense{
+    align-content: center;
+    padding: 8px 16px;
+   }
+   .top .top2 .lense svg{
+     height: 16px;
+     width: 16px;
+     fill: rgb(255, 255, 255);
+   }
+   .top .top2 button{
+     font-weight: 700;
+     font-family: 'spotify-bold', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+     font-size: 13px;
+     border-radius: 9999px;
+     box-sizing: border-box;
+     cursor: pointer;
+     display: inline-block;
+     position: relative;
+     text-align: center;
+     padding: 0px;
+     border: none;
+     background-color: transparent;
+   }
+   .top .top2 button .span{
+     font-weight: 700;
+     font-family: 'spotify-bold', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+     font-size: 13px;
+     position: relative;
+     background-color: rgb(255, 255, 255);
+     padding: 7px 16px;
+     border-radius: 9999px;
+     align-items: center;
+     justify-content: center;
+   }
+   .top .top2 .menu{
+     align-items: center;
+     margin-left: 16px;
+     color: #fff;
+     padding: 4px 0px;
+     text-align: start;
+   }
+   .top .top2 .menu svg{
+     height: 24px;
+     width: 24px;
+     fill: #fff;
+   }
+   .main .top .button{
+     display: none;
+   }
+   .main .left{
+       display: none;
+     }
+     .foot{
+       display: none;
+     }
+     .main {
+       padding: 0px;
+       margin: 0px;
+       display: block;
+     }
+     .main .right .right-in{
+       position: relative;
+       width: 100%;
+       background-color: rgb(18, 18, 18);
+       margin-top: 56px;
+       padding: 0px;
+     }
+     .main .right .right-in .background{
+      display: none;
+     }
+     .right .right-in .show{
+       padding: 0px 16px;
+     }
+     .right .right-in .show .show-in{
+       display: block;
+       padding: 0;
+     }
+     .right-in .show .show-in .artists .heading{
+       margin: 24px 0px 12px 0px;
+       height: 24px;
+       
+     }
+     .right-in .show .show-in .artists .heading .head{
+      display: block;
+     }
+     .show .show-in .artists .heading .head .main-head h2{
+       color: rgb(255, 255, 255);
+       font-family: 'spotify-title', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+       font-size: 20px;
+       font-weight: 700;
+       line-height: normal;
+       margin: 0;
+    }
+    .show .show-in .artists .heading .head .button{
+       display: none;
+    }
+    .show .show-in .artists .artists-in{
+       display: flex;
+       left: 50%;
+       margin-left: -50vw;
+       margin-right: -50vw;
+       position: relative;
+       right: 50%;
+       width: 100vw;
+       flex-wrap: nowrap;
+       gap: 0px;
+       align-items: stretch;
+       overflow-x: scroll;
+       scrollbar-width: none;
+    }
+    .show .show-in .artists .artists-in .row-in{
+       padding: 8px;
+       border-radius: 6px;
+       display: inline-flex;
+       flex-direction: column;
+       row-gap: 8px;
+    }
+    .show .show-in .artists .artists-in .row-in:nth-child(1){
+       margin-left: 8px;
+    }
+    .show .show-in .artists .artists-in .row-in img{
+       border-radius: 4px;
+       height: 152px;
+       object-fit: cover;
+    }
+    .show .show-in .artists .artists-in .row-in .about p{
+       display: none;
+    }
+    .right-in .show .show-in .albums .heading{
+       margin: 22px 0px 12px 0px;
+       height: 24px;
+    }
+    .right-in .show .show-in .albums .heading .head{
+      display: block;
+    }
+     .show .show-in .albums .heading .head .main-head h2{
+       color: rgb(255, 255, 255);
+       font-family: 'spotify-title', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+       font-size: 20px;
+       font-weight: 700;
+       line-height: normal;
+       margin-top: 2px;
+       margin-bottom: 0;
+    }
+    .show .show-in .albums .heading .head .button{
+       display: none;
+    }
+    .show .show-in .albums .albums-in{
+       display: flex;
+       left: 50%;
+       margin-left: -50vw;
+       margin-right: -50vw;
+       position: relative;
+       right: 50%;
+       width: 100vw;
+       flex-wrap: nowrap;
+       align-items: stretch;
+       overflow-x: scroll;
+       scrollbar-width: none;
+    }
+    .show .show-in .albums .albums-in .row-in{
+       padding: 8px;
+       border-radius: 6px;
+       display: inline-flex;
+       flex-direction: column;
+       row-gap: 8px;
+    }
+    .show .show-in .albums .albums-in .row-in:nth-child(1){
+       margin-left: 8px;
+    }
+    .show .show-in .albums .albums-in .row-in img{
+       border-radius: 4px;
+       height: 152px;
+    }
+    .show .show-in .albums .albums-in .row-in .about p{
+       display: none;
+    }
+    .right-in .show .show-in .radio .heading {
+       margin: 24px 0px 12px 0px;
+       height: 24px;
+    }
+    .right-in .show .show-in .radio .heading .head{
+      display: block;
+    }
+  
+     .show .show-in .radio .heading .head .main-head h2{
+       color: rgb(255, 255, 255);
+       font-family: 'spotify-title', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+       font-size: 20px;
+       font-weight: 700;
+       line-height: normal;
+       margin: 0;
+    }
+    .show .show-in .radio .heading .head .button{
+       display: none;
+    }
+    .show .show-in .radio .radio-in{
+       display: flex;
+       left: 50%;
+       margin-left: -50vw;
+       margin-right: -50vw;
+       position: relative;
+       right: 50%;
+       width: 100vw;
+       align-items: stretch;
+       overflow-x: scroll;
+       scrollbar-width: none;
+       flex-wrap: nowrap;
+    }
+    .show .show-in .radio .radio-in .row-in{
+       padding: 8px;
+       border-radius: 6px;
+       display: inline-flex;
+       flex-direction: column;
+       row-gap: 8px;
+    }
+    .show .show-in .radio .radio-in .row-in:nth-child(1){
+       margin-left: 8px;
+    }
+    .show .show-in .radio .radio-in .row-in img{
+       border-radius: 4px;
+       height: 152px;
+    }
+    .show .show-in .radio .radio-in .row-in .about p{
+       display: none;
+    }
+    .right-in .show .show-in .charts .heading {
+       margin: 24px 0px 12px 0px;
+       height: 24px; 
+    }
+    .right-in  .show .show-in .charts .heading .head{
+      display: block;
+    }
+     .show .show-in .charts .heading .head .main-head h2{
+       color: rgb(255, 255, 255);
+       font-family: 'spotify-title', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+       font-size: 20px;
+       font-weight: 700;
+       line-height: normal;
+       margin: 0;
+    }
+    .show .show-in .charts .heading .head .button{
+       display: none;
+    }
+    .show .show-in .charts .charts-in{
+       display: flex;
+       left: 50%;
+       margin-left: -50vw;
+       margin-right: -50vw;
+       position: relative;
+       right: 50%;
+       width: 100vw;
+       align-items: stretch;
+       overflow-x: scroll;
+       scrollbar-width: none;
+    }
+    .show .show-in .charts .charts-in .row-in{
+       padding: 8px;
+       border-radius: 6px;
+       display: inline-flex;
+       flex-direction: column;
+       row-gap: 8px;
+    }
+    .show .show-in .charts .charts-in .row-in:nth-child(1){
+       margin-left: 8px;
+    }
+    .show .show-in .charts .charts-in .row-in img{
+       border-radius: 4px;
+       height: 152px;
+    }
+    .show .show-in .charts .charts-in .row-in .about p{
+       display: none;
+    }
+   .right-in .show .show-in .playlist .heading{
+       margin: 24px 0px 12px 0px;
+       height: 24px;
+    }
+    .right-in   .show .show-in .playlist .heading .head{
+      display: block;
+    }
+    .show .show-in .playlist .heading .head .main-head h2{
+      color: rgb(255, 255, 255);
+      font-family: 'spotify-title', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+      font-size: 20px;
+      font-weight: 700;
+      line-height: normal;
+      margin: 0;
+   }
+   .show .show-in .playlist .heading .head .button{
+      display: none;
+   }
+   .show .show-in .playlist .playlist-in{
+      display: flex;
+      left: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      position: relative;
+      right: 50%;
+      width: 100vw;
+      align-items: stretch;
+      overflow-x: scroll;
+      scrollbar-width: none;
+   }
+   .show .show-in .playlist .playlist-in .row-in{
+      padding: 8px;
+      border-radius: 6px;
+      display: inline-flex;
+      flex-direction: column;
+      row-gap: 8px;
+   }
+   .show .show-in .playlist .playlist-in .row-in:nth-child(1){
+      margin-left: 8px;
+   }
+   .show .show-in .playlist .playlist-in .row-in img{
+      border-radius: 4px;
+      height: 152px;
+      object-fit: cover;
+   }
+   .show .show-in .playlist .playlist-in .row-in .about p{
+       display: none;
+   }
+}
+   @media screen and (min-width:768px) and (max-width:986px){
+   .right .right-in .bottom{
+       padding: 0px;
+   }
+   .right-in .bottom nav{
+       padding: 8px 16px 40px;
+   }
+   .right-in .bottom nav .footer{
+      display: flex;
+       flex-direction: column;
+   }
+   .right-in .bottom nav .footer .footer_style{
+       display: flex;
+       flex-flow: column wrap;
+       flex-direction: row;
+   }
+   .right-in .bottom nav .footer .footer_style .column{
+       width: 40%;
+   }
+   .right-in .bottom nav .footer .footer_style .column ul p{
+      margin-bottom: 8px;
+   }
+   .right-in .bottom nav .footer .footer_style .column ul a{
+       font-size: 16px;
+       font-weight: 400;
+       margin-top: 0px;
+       font-family: 'spotify-regular', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+   }
+   .right .privacy{
+       display: flex;
+       flex-flow: column wrap;
+       justify-content: space-between;
+   }
+   .bottom .footer .sociallink .link{
+      padding-right: 12px;
+   }
+   hr{
+      margin-top: 0;
+      margin-bottom: 22px;
+      margin-right: 0;
+      border-bottom: 0;
+   }
+   .right .privacy{
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-between;
+   }
+   .right .privacy .Safety-privacy{
+       display: flex;
+       flex-flow: wrap;
+   }
+   .right .privacy .Safety-privacy .point{
+       margin-right: 16px;
+   }
+   .right .privacy .Safety-privacy .point a{
+       margin-bottom: 8px;
+       align-items: center;
+       text-decoration: none;
+       line-height: normal;
+       color: rgb(179, 179, 179);
+       font-size: 14px;
+       display: inline-flex;
+       font-family: 'spotify-regular', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic"; 
+   }
+   .right .AB{
+      padding: 0px;
+   }
+   .right .AB p{
+      margin: 0;
+   }
+   .right .english{
+       display: block;
+       padding-top: 16px;
+       padding-left: 0px;
+       padding-right: 0px;
+       margin-bottom: 0px;
+   }
+   .right .english .language{
+       padding: 3px 15px 3px 32px;
+       height: 24px;
+       font-size: 13px;
+       font-family: 'spotify-bold', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+       font-weight: 400;
+   }
+}
+@media screen and (min-width:986px) and (max-width:1024px){
+  .right-in .bottom nav{
+      padding: 8px 32px 40px;
+  }
+  .right-in .bottom nav .footer .footer_style{
+      display: flex;
+      flex-flow: column wrap;
+      flex-direction: row;
+  }
+  .footer_style .column ul p{
+   font-size: 1rem;
+    font-weight: 700;
+    padding-bottom: 8px;
+  }
+  .right-in .bottom nav .footer .footer_style .column ul a{
+   font-size: 1rem;
+   font-weight: 400;
+   margin: 0px 0px;
+   padding-bottom: 8px;
+  }
+  .right .AB p{
+   margin: 0;
+  }
+  hr{
+   margin-top: 0;
+  }
+}
+@media screen and (max-width:767px){
+   .right .right-in .bottom{
+      padding: 0px;
+  }
+  .right-in .bottom nav{
+   padding: 8px 16px 40px;
+}
+.right-in .bottom nav .footer{
+   display: flex;
+    flex-direction: column;
+}
+.right-in .bottom nav .footer .footer_style{
+   display: flex;
+   flex-flow: column wrap;
+}
+.right-in .bottom nav .footer .footer_style .column{
+   width: 100%;
+   margin-right: 0px;
+}
+.right-in .bottom nav .footer .footer_style .column ul p{
+   margin-bottom: 8px;
+}
+.right-in .bottom nav .footer .footer_style .column ul a{
+   font-size: 16px;
+   font-weight: 400;
+   margin-top: 0px;
+   font-family: 'spotify-regular', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+}
+.bottom .footer .sociallink .link{
+   padding-right: 12px;
+}
+hr{
+   border-bottom: 0px;
+   border-left: 0px;
+   border-right: 0px;
+   margin-top: 0;
+   margin-bottom: 20px;
+   margin-right: 0;
+}
+.right .privacy{
+   display: flex;
+   flex-flow: column wrap;
+   justify-content: space-between;
+}
+.right .privacy .Safety-privacy{
+   display: flex;
+   flex-flow: wrap;
+}
+.right .privacy .Safety-privacy .point{
+   margin-right: 16px;
+}
+.right .privacy .Safety-privacy .point a{
+   margin-bottom: 8px;
+   align-items: center;
+   text-decoration: none;
+   line-height: normal;
+   color: rgb(179, 179, 179);
+   font-size: 14px;
+   display: inline-flex;
+   font-family: 'spotify-regular', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic"; 
+}
+.right .AB{
+   padding: 0px;
+}
+.right .AB p{
+   margin: 0;
+}
+.right .english{
+    display: block;
+    padding-top: 16px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 0px;
+}
+.right .english .language{
+    padding: 3px 15px 3px 32px;
+    height: 24px;
+    font-size: 13px;
+    font-family: 'spotify-bold', CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+    font-weight: 400;
+}
+}
+@media screen and (min-width:769px) and (max-width:1665px){
+   .main .right .right-in{
+      min-height: 206px;
+   }
+   .right .right-in .show{
+      padding-right: 40px;
+   }
+   .right .right-in .show .show-in{
+      padding: 0 auto;
+   }
+   .show .show-in .artists .artists-in{
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+   }
+   .show .show-in .albums .albums-in{
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+   }
+   .show .show-in .radio .radio-in{
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+   }
+   .show .show-in .charts .charts-in{
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+   }
+   .show .show-in .playlist .playlist-in{
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+   }
+}
+@media screen and (min-width:769px) and (max-width:2516px){
+   .show .show-in .artists .artists-in .row-in:nth-child(9){
+      display: none;
+   }
+   .show .show-in .albums .albums-in .row-in:nth-child(9){
+      display: none;
+   }
+   .show .show-in .radio .radio-in .row-in:nth-child(9){
+      display: none;
+   }
+   .show .show-in .playlist .playlist-in .row-in:nth-child(9){
+      display: none;
+   }
+}
+@media screen and (min-width:769px) and (max-width:2312px){
+   .show .show-in .artists .artists-in .row-in:nth-child(8){
+      display: none;
+   }
+   .show .show-in .albums .albums-in .row-in:nth-child(8){
+      display: none;
+   }
+   .show .show-in .radio .radio-in .row-in:nth-child(8){
+      display: none;
+   }
+   .show .show-in .playlist .playlist-in .row-in:nth-child(8){
+      display: none;
+   }
+}
+@media screen and (min-width:2000px) and (max-width:2098px){
+   .show .show-in .artists .artists-in .row-in:nth-child(7){
+      display: none;
+   }
+   .show .show-in .albums .albums-in .row-in:nth-child(7){
+      display: none;
+   }
+   .show .show-in .radio .radio-in .row-in:nth-child(7){
+      display: none;
+   }
+   .show .show-in .playlist .playlist-in .row-in:nth-child(7){
+      display: none;
+   }
+}
+@media screen and (min-width:769px) and (max-width:1434px){
+   .show .show-in .artists .artists-in .row-in:nth-child(6){
+      display: none;
+   }
+   .show .show-in .albums .albums-in .row-in:nth-child(6){
+      display: none;
+   }
+   .show .show-in .radio .radio-in .row-in:nth-child(6){
+      display: none;
+   }
+   .show .show-in .charts .charts-in .row-in:nth-child(6){
+      display: none;
+   }
+   .show .show-in .playlist .playlist-in .row-in:nth-child(6){
+      display: none;
+   }
+}
+@media screen and (min-width:769px) and (max-width:1573px){
+   .show .show-in .artists .artists-in .row-in:nth-child(7){
+      display: none;
+   }
+   .show .show-in .albums .albums-in .row-in:nth-child(7){
+      display: none;
+   }
+   .show .show-in .radio .radio-in .row-in:nth-child(7){
+      display: none;
+   }
+   .show .show-in .playlist .playlist-in .row-in:nth-child(7){
+      display: none;
+   }
+}
+@media screen and (min-width:769px) and (max-width:1274px){
+   .show .show-in .artists .artists-in .row-in:nth-child(5){
+      display: none;
+   }
+   .show .show-in .albums .albums-in .row-in:nth-child(5){
+      display: none;
+   }
+   .show .show-in .radio .radio-in .row-in:nth-child(5){
+      display: none;
+   }
+   .show .show-in .charts .charts-in .row-in:nth-child(5){
+      display: none;
+   }
+   .show .show-in .playlist .playlist-in .row-in:nth-child(5){
+      display: none;
+   }
+}
+@media screen and (min-width:769px) and (max-width:1114px){
+   .show .show-in .artists .artists-in .row-in:nth-child(4){
+      display: none;
+   }
+   .show .show-in .albums .albums-in .row-in:nth-child(4){
+      display: none;
+   }
+   .show .show-in .radio .radio-in .row-in:nth-child(4){
+      display: none;
+   }
+   .show .show-in .charts .charts-in .row-in:nth-child(4){
+      display: none;
+   }
+   .show .show-in .playlist .playlist-in .row-in:nth-child(4){
+      display: none;
+   }
+}
+@media screen and (min-width:769px) and (max-width:954px){
+   .show .show-in .artists .artists-in .row-in:nth-child(3){
+      display: none;
+   }
+   .show .show-in .albums .albums-in .row-in:nth-child(3){
+      display: none;
+   }
+   .show .show-in .radio .radio-in .row-in:nth-child(3){
+      display: none;
+   }
+   .show .show-in .charts .charts-in .row-in:nth-child(3){
+      display: none;
+   }
+   .show .show-in .playlist .playlist-in .row-in:nth-child(3){
+      display: none;
+   }
+}
+@media screen and (min-width:769px) and (max-width:794px){
+   .show .show-in .artists .artists-in .row-in:nth-child(2){
+      display: none;
+   }
+   .show .show-in .albums .albums-in .row-in:nth-child(2){
+      display: none;
+   }
+   .show .show-in .radio .radio-in .row-in:nth-child(2){
+      display: none;
+   }
+   .show .show-in .charts .charts-in .row-in:nth-child(2){
+      display: none;
+   }
+   .show .show-in .playlist .playlist-in .row-in:nth-child(2){
+      display: none;
+   }
+}
+@media screen and (min-width:1666px) and (max-width:2000px){
+   .show .show-in .artists .artists-in .row-in:nth-child(7){
+      display: none;
+   }
+   .show .show-in .albums .albums-in .row-in:nth-child(7){
+      display: none;
+   }
+   .show .show-in .radio .radio-in .row-in:nth-child(7){
+      display: none;
+   }
+   .show .show-in .playlist .playlist-in .row-in:nth-child(7){
+      display: none;
+   }
+}
+@media screen and (min-width:1666px) and (max-width:1895px){
+   .show .show-in .artists .artists-in .row-in:nth-child(6){
+      display: none;
+   }
+   .show .show-in .albums .albums-in .row-in:nth-child(6){
+      display: none;
+   }
+   .show .show-in .radio .radio-in .row-in:nth-child(6){
+      display: none;
+   }
+   .show .show-in .charts .charts-in .row-in:nth-child(6){
+      display: none;
+   }
+   .show .show-in .playlist .playlist-in .row-in:nth-child(6){
+      display: none;
+   }
+}
+@media screen and (min-width:1666px) and (max-width:1680px){
+   .show .show-in .artists .artists-in .row-in:nth-child(5){
+      display: none;
+   }
+   .show .show-in .albums .albums-in .row-in:nth-child(5){
+      display: none;
+   }
+   .show .show-in .radio .radio-in .row-in:nth-child(5){
+      display: none;
+   }
+   .show .show-in .charts .charts-in .row-in:nth-child(5){
+      display: none;
+   }
+   .show .show-in .playlist .playlist-in .row-in:nth-child(5){
+      display: none;
+   }
+}
+
